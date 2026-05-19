@@ -211,9 +211,9 @@ async function refreshListaPacientes() {
         const oldPagination = document.getElementById('pacientes-pagination');
         const oldCounts = document.getElementById('pacientes-counts');
 
-        if (oldTable && newTable) oldTable.outerHTML = newTable.outerHTML; // sourcery skip: javascript.browser.security.insecure-innerhtml
-        if (oldPagination && newPagination) oldPagination.outerHTML = newPagination.outerHTML; // sourcery skip: javascript.browser.security.insecure-innerhtml
-        if (oldCounts && newCounts) oldCounts.outerHTML = newCounts.outerHTML; // sourcery skip: javascript.browser.security.insecure-innerhtml
+        if (oldTable && newTable) oldTable.outerHTML = newTable.outerHTML; // sourcery skip: javascript.browser.security.insecure-document-method
+        if (oldPagination && newPagination) oldPagination.outerHTML = newPagination.outerHTML; // sourcery skip: javascript.browser.security.insecure-document-method
+        if (oldCounts && newCounts) oldCounts.outerHTML = newCounts.outerHTML; // sourcery skip: javascript.browser.security.insecure-document-method
 
         if (typeof lucide !== 'undefined') lucide.createIcons();
     } catch (err) {

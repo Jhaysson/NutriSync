@@ -183,8 +183,8 @@ class PacienteUpdateView(FormFragmentMixin, NutricionistaPacienteMixin, UpdateVi
 # ─── Activar / Desactivar paciente (soft-delete) ─────────────────────────────
 
 
-@require_POST
 @login_required
+@require_POST
 def paciente_toggle_estado(request, pk):
     """
     Activa o desactiva un paciente sin borrar sus datos (soft-delete).
